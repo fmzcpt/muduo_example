@@ -86,3 +86,9 @@ TcpStreamPtr TcpStream::connectInter(const InetAddress& serverAddr,const InetAdd
     }
     return stream;
 }
+
+void TcpStream::shutdown()
+{
+    sock_.shutdownWrite();
+    return;
+}
